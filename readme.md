@@ -19,6 +19,7 @@ Este projeto é uma API REST construída em **Java Spring Boot** com **MongoDB**
 - Lombok
 - Swagger OpenAPI
 - Maven
+- Docker
 
 ---
 
