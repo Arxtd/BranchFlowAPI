@@ -1,0 +1,9 @@
+services:
+  mongodb:
+    image: 'mongo:latest'
+    environment:
+      - 'MONGO_INITDB_DATABASE=branch_flow'
+      - 'MONGO_INITDB_ROOT_PASSWORD=branchadmin'
+      - 'MONGO_INITDB_ROOT_USERNAME=admin'
+    ports:
+      - '27017:27017'
