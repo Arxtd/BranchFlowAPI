@@ -31,15 +31,15 @@ public class RepositoryController {
         return ResponseEntity.ok(repositoryService.search(name, description, pageable));
     }
 
-    @DeleteMapping("/delete")
-    public ResponseEntity<String> deleteRepository(@RequestParam String name) {
-        repositoryService.delete(name);
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<String> deleteRepository(@PathVariable String id) {
+        repositoryService.delete(id);
         return ResponseEntity.ok("Repository deleted");
     }
 
-    @PutMapping("/update")
-    public ResponseEntity<String> updateRepository(@RequestParam String name, @RequestBody RepositoryDTO repo) {
-        repositoryService.update(name, repo);
+    @PutMapping("/update/{id}")
+    public ResponseEntity<String> updateRepository(@PathVariable String id , @RequestBody RepositoryDTO repo) {
+        repositoryService.update(id, repo);
         return ResponseEntity.ok("Repository updated");
     }
 }

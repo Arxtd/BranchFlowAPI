@@ -34,25 +34,16 @@ public class RepositoryService {
         return repositoryPage.map(repositoryMapper::toRepositoryDTO);
     }
 
-    public void update(String name, RepositoryDTO repositoryDTO) {
-        Repository repository = repositoryRepository.findRepositoryByName(name);
+    public void update(String id, RepositoryDTO repositoryDTO) {
+        Repository repository = repositoryRepository.findById(id).orElseThrow(ItemNotFoundException::new);
 
-        if (repository != null) {
-            repository.setName(repositoryDTO.getName());
-            repository.setDescription(repositoryDTO.getDescription());
-            repositoryRepository.save(repository);
-        } else {
-            throw new ItemNotFoundException();
-        }
+        repository.setName(repositoryDTO.getName());
+        repository.setDescription(repositoryDTO.getDescription());
+        repositoryRepository.save(repository);
     }
 
-    public void delete(String name) {
-        Repository repository = repositoryRepository.findRepositoryByName(name);
-
-        if (repository != null) {
-            repositoryRepository.delete(repository);
-        } else {
-            throw new ItemNotFoundException();
-        }
+    public void delete(String id) {
+        Repository repository = repositoryRepository.findById(id).orElseThrow(ItemNotFoundException::new);
+        repositoryRepository.delete(repository);
     }
 }
