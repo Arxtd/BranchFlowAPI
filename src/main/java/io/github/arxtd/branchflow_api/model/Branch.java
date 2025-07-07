@@ -1,5 +1,6 @@
 package io.github.arxtd.branchflow_api.model;
 
+import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
@@ -14,8 +15,8 @@ public class Branch {
     @Id
     private String id;
     @Indexed(unique = true)
+    @NotNull
     private String name;
+    @NotNull
     private String repositoryId;
-
-
 }

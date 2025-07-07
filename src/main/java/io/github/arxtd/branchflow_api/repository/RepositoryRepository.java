@@ -10,6 +10,4 @@ public interface RepositoryRepository extends MongoRepository<io.github.arxtd.br
 
     Page<io.github.arxtd.branchflow_api.model.Repository> findByNameContainingIgnoreCaseOrDescriptionContainingIgnoreCase(String name, String description, Pageable pageable);
     Page<io.github.arxtd.branchflow_api.model.Repository> findAll(@NonNull Pageable pageable);
-
-    io.github.arxtd.branchflow_api.model.Repository findRepositoryByName(String name);
 }

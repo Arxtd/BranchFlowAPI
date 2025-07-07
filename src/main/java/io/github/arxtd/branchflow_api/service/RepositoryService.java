@@ -43,7 +43,6 @@ public class RepositoryService {
     }
 
     public void delete(String id) {
-        Repository repository = repositoryRepository.findById(id).orElseThrow(ItemNotFoundException::new);
-        repositoryRepository.delete(repository);
+        repositoryRepository.deleteById(id);
     }
 }
