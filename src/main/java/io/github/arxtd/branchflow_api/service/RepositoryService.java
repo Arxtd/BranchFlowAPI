@@ -1,6 +1,6 @@
 package io.github.arxtd.branchflow_api.service;
 
-import io.github.arxtd.branchflow_api.dto.RepositoryDTO;
+import io.github.arxtd.branchflow_api.dto.repository.RepositoryDTO;
 import io.github.arxtd.branchflow_api.infra.exception.ItemNotFoundException;
 import io.github.arxtd.branchflow_api.mapper.RepositoryMapper;
 import io.github.arxtd.branchflow_api.model.Repository;
@@ -44,5 +44,9 @@ public class RepositoryService {
 
     public void delete(String id) {
         repositoryRepository.deleteById(id);
+    }
+
+    public boolean exists(String id) {
+        return repositoryRepository.existsById(id);
     }
 }

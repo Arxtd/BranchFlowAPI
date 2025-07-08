@@ -1,6 +1,6 @@
 package io.github.arxtd.branchflow_api.mapper;
 
-import io.github.arxtd.branchflow_api.dto.RepositoryDTO;
+import io.github.arxtd.branchflow_api.dto.repository.RepositoryDTO;
 import io.github.arxtd.branchflow_api.model.Repository;
 import org.mapstruct.Mapper;
 

@@ -1,6 +1,6 @@
 package io.github.arxtd.branchflow_api.controller;
 
-import io.github.arxtd.branchflow_api.dto.RepositoryDTO;
+import io.github.arxtd.branchflow_api.dto.repository.RepositoryDTO;
 import io.github.arxtd.branchflow_api.service.RepositoryService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;

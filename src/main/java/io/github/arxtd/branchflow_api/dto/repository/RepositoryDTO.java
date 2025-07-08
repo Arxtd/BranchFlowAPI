@@ -1,4 +1,4 @@
-package io.github.arxtd.branchflow_api.dto;
+package io.github.arxtd.branchflow_api.dto.repository;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
